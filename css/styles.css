@@ -1,0 +1,320 @@
+
+
+/* global */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p, a{
+  font-family: 'open sans';
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.green {
+  background-color: #178A27;
+  color: #fff;
+}
+
+.blue {
+  background-color: #1686C1;
+  color: #fff;
+}
+
+.red {
+  background-color: #852406;
+  color: #fff;
+}
+
+.btn {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* nav */
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 77px;
+  background-color: #383E4C;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 10px 20px;
+  font-size: 20px;
+  list-style-type: none;
+  border: 2px solid #646D7C;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* header */
+
+header {
+  position: relative;
+  background: url("https://images.pexels.com/photos/380/forest-meadow-leaves-autumn.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center fixed;
+  height: 614px;
+}
+
+header .main {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header .main h1 {
+  font-size: 65px;
+  text-shadow: 1px 1px 1px #000;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+header .main p {
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 26px
+}
+
+
+/* 3-columns  */
+
+.gridwrapper_1 {
+  display: grid;
+  padding-top: 70px;
+  grid-template-columns: 360px 360px 360px;
+  justify-content: center;
+  height: 500px;
+  grid-gap: 40px;
+}
+
+.three-images img {
+  width: 100%;
+  height: 180px
+}
+
+.three-images h3 {
+  padding: 20px 5px 10px 5px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.three-images p {
+  padding: 20px 5px 10px 5px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+
+/* 2-columns */
+
+.gridwrapper_2 {
+  display: grid;
+  padding-top: 60px;
+  grid-template-columns: 560px 560px;
+  justify-content: center;
+  grid-gap: 40px;
+  height: 700px;
+}
+
+.gridwrapper_2 img {
+  width: 100%;
+  height: 240px
+}
+
+.gridwrapper_2 h3 {
+  text-align: center;
+  padding: 20px 0 30px;
+}
+
+.gridwrapper_2 p {
+  padding: 0px 30px;
+  text-align: justify;
+}
+
+.gridwrapper_2 button {
+  margin: 20px 0px 20px 30px;
+}
+
+
+/* Services banner */
+
+.banner {
+  position: relative;
+  background:url("https://images.pexels.com/photos/258112/pexels-photo-258112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")no-repeat center center fixed;
+  background-size: cover;
+  height: 320px;
+}
+
+.banner .banner-text {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner .banner-text h1 {
+  font-size: 35px;
+  text-shadow: 1px 1px 1px #000;
+  font-weight: 300;
+  padding: 10px 0 20px 0;
+}
+
+.banner .banner-text p {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* 4-column section */
+
+.gridwrapper_3 {
+  display: grid;
+  padding-top: 60px;
+  grid-template-columns: 260px 260px 260px 260px;
+  justify-content: center;
+  grid-gap: 30px;
+  height: 700px;
+}
+
+.gridwrapper_3 img {
+  width: 100%;
+  height: 260px;
+}
+
+.gridwrapper_3 h2 {
+  text-align: center;
+  padding: 20px 0 20px 0
+}
+
+.gridwrapper_3 button {
+  margin-top: 30px;
+}
+
+
+/* Big-column */
+
+.gridwrapper_4 {
+  display: grid;
+  padding-top: 60px;
+  grid-template-columns: 1140px;
+  justify-content: center;
+  grid-gap: 30px;
+  height: 950px;
+}
+
+.gridwrapper_4 .big-column img{
+  width: 100%;
+  height: 434px;
+}
+
+.gridwrapper_4 .big-column h2 {
+  padding: 40px 0 10px 0;
+}
+
+.gridwrapper_4 .big-column button {
+  margin-top: 30px;
+}
+
+
+/* Contact */
+.contact {
+  position: relative;
+  background:url("https://images.pexels.com/photos/205002/pexels-photo-205002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")no-repeat center center fixed;
+  background-size: cover;
+  height: 575px;
+}
+
+.contact h1 {
+  font-size: 35px;
+  text-shadow: 1px 1px 1px #000;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+.gridwrapper_5 {
+  display: grid;
+  margin-top: 150px;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 34px 34px 34px 134px 34px;
+  grid-template-areas:
+    "name name"
+    "email email"
+    "subject subject"
+    "message message"
+    "subject subject";
+  grid-gap: 10px;
+}
+
+
+.gridwrapper_5 .form-item {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.subject {
+  grid-area: subject;
+}
+
+.message {
+  grid-area: message;
+}
+
+textarea[name=message] {
+  resize: none;
+}
+
+.subject {
+  grid-area: subject;
+}
