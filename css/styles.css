@@ -70,6 +70,14 @@ input, textarea, button, .contact-textbox{
   z-index: 500;
 }
 
+#menu-toggle {
+  display: none;
+}
+
+.label-toggle {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-flow: row nowrap;
@@ -104,6 +112,7 @@ nav ul li a {
 header {
   position: relative;
   background: url("https://images.pexels.com/photos/380/forest-meadow-leaves-autumn.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat center center fixed;
+  background-size: cover;
   height: 614px;
 }
 
@@ -435,8 +444,20 @@ footer .footer-textbox {
 @media only screen and (max-width: 750px) {
 
   /* navbar */
-  nav ul li a {
-    font-size: 16px;
+
+  nav {
+    display: block;
+    height: auto;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    border-left: none;
+    border-right: none;
   }
 
   /* 3 columns */
@@ -445,7 +466,7 @@ footer .footer-textbox {
   }
 
   .three-images img {
-    height: 180px
+    height: 180px;
   }
 
   /* 2 columns */
