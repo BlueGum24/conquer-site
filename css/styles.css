@@ -10,6 +10,15 @@
   box-sizing: border-box;
 }
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 h1, h2, h3, p, a{
   font-family: 'open sans';
 }
@@ -64,46 +73,53 @@ input, textarea, button, .contact-textbox{
 
 /* nav */
 
-.nav-bar {
-  position: fixed;
-  width: 100%;
-  z-index: 500;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.label-toggle {
-  display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 nav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 77px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   background-color: #383E4C;
+  line-height: 70px;
+  text-align: center;
+  border-bottom: 1px solid #111;
 }
 
 nav ul {
-  display: flex;
-  justify-content: center;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 30px 0 0;
 }
 
 nav ul li {
   padding: 10px 20px;
-  list-style-type: none;
   border: 2px solid #646D7C;
-  margin: 0 10px;
-  cursor: pointer;
+  display: inline;
+  margin-left: 30px;
 }
 
 nav ul li a {
   font-size: 20px;
   text-decoration: none;
+  margin: 0 10px;
   color: #fff;
+  line-height: 70px;
+}
+
+label {
+  margin: 0 40px 0 0;
+  color: #fff;
+  font-size: 40px;
+  line-height: 70px;
+  display: none;
+}
+
+#toggle {
+  display: none;
 }
 
 
@@ -117,7 +133,7 @@ header {
 }
 
 header .main {
-  position: relative;
+  position: absolute;
   text-align: center;
   width: 100%;
   color: #fff;
@@ -286,7 +302,7 @@ header .main p {
   position: relative;
   background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://images.pexels.com/photos/205002/pexels-photo-205002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")no-repeat center center fixed;
   background-size: cover;
-  height: 675px;
+  min-height: 675px;
 }
 
 .contact h1 {
@@ -309,12 +325,11 @@ header .main p {
 
 .gridwrapper_5 {
   display: grid;
-  grid-template-columns: auto 360px 360px;
-  grid-template-rows: 100px 40px 40px 40px 55px 40px;
+  grid-template-columns: auto 300px 300px;
+  grid-template-rows: auto 40px 40px 40px 55px 40px;
   justify-content: center;
   grid-auto-flow: row dense;
   grid-gap: 1.5em;
-  padding: 1.2em;
 }
 
 .gridwrapper_5 .contact-textbox {
@@ -445,19 +460,31 @@ footer .footer-textbox {
 
   /* navbar */
 
-  nav {
+
+  label {
     display: block;
-    height: auto;
+    cursor: pointer;
+  }
+
+  nav {
+    text-align: right;
   }
 
   nav ul {
-    display: block;
     text-align: center;
+    display: none;
+    width: 100%;
   }
 
   nav ul li {
-    border-left: none;
-    border-right: none;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #eaeaeb;
+    margin: 0;
+  }
+
+  #toggle:checked + ul {
+    display: block;
   }
 
   /* 3 columns */
@@ -481,16 +508,41 @@ footer .footer-textbox {
   /* 4 columns to 2 columns */
   .gridwrapper_3 {
     grid-template-columns: 260px 260px;
-    grid-gap: 100px;
+    grid-gap: 40px;
   }
-
 
   /* big-column */
   .gridwrapper_4 {
-    grid-template-columns: 640px;
+    grid-template-columns: 1fr;
   }
 
   .gridwrapper_4 .big-column img{
     height: 267px;
+  }
+
+  /* contact */
+
+  .gridwrapper_5 {
+    grid-template-columns: auto 80%;
+
+  }
+
+  .contact .contact-textbox {
+    grid-column: 2;
+    grid-row: span auto;
+    width: 100%;
+    border: none;
+  }
+
+  .gridwrapper_5 textarea {
+    grid-column: 2;
+    grid-row: span 3;
+    width: 100%;
+    border: none;
+  }
+
+  .gridwrapper_5 button {
+    grid-column: 2;
+    margin-bottom: 40px;
   }
 }
