@@ -22,6 +22,10 @@ h1, h2, h3, p, a{
   font-family: 'open sans';
 }
 
+p {
+  font-size: 14px;
+}
+
 input, textarea, button, .contact-textbox{
   color: #000;
   border-radius: 5px;
@@ -156,7 +160,6 @@ header .main h1 {
 header .main p {
   text-align: center;
   text-shadow: 1px 1px 1px #000;
-  font-size: 26px
 }
 
 
@@ -196,7 +199,7 @@ header .main p {
   padding-top: 60px;
   grid-template-columns: 560px 560px;
   justify-content: center;
-  grid-gap: 40px;
+  grid-gap: 30px;
   min-height: 700px;
 }
 
@@ -211,7 +214,7 @@ header .main p {
 }
 
 .gridwrapper_2 p {
-  padding: 0px 30px;
+  padding: 0px 25px;
   text-align: justify;
 }
 
